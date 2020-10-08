@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite-api
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-suite-api', version: '1.7.0'
+    // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.7.0'
+
+}
